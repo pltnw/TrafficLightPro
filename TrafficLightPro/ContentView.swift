@@ -9,11 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
    
-    private var currentLight = CurrentLight.red
-    private let lightIsOn: CGFloat = 1
-    private let lightIsOff: CGFloat = 0.4
-
+    @State private var currentLight = CurrentLight.red
+    @State private var lightIsOn = 1.0
+    @State private var lightIsOff = 0.4
     
+    @State var redLight = PlafondTrafficLightView(color: .red, brightness: 0.4)
+    @State var yellowLight = PlafondTrafficLightView(color: .yellow, brightness: 0.4)
+    @State var greenLight = PlafondTrafficLightView(color: .green, brightness: 0.4)
     
     var body: some View {
         VStack(spacing: 0.0) {
@@ -24,31 +26,10 @@ struct ContentView: View {
                         .cornerRadius(30)
                         .shadow(radius: 10)
                 
-                
                 VStack{
-                    Circle()
-                        .foregroundColor(.red)
-                        .opacity(lightIsOff)
-                        .frame(width: 120, height: 120)
-                        .overlay(Circle().stroke(Color.white, lineWidth: 5))
-                        .shadow(color: .gray, radius: 10)
-                        .padding()
-                    
-                    Circle()
-                        .foregroundColor(.yellow)
-                        .opacity(lightIsOff)
-                        .frame(width: 120, height: 120)
-                        .overlay(Circle().stroke(Color.white, lineWidth: 5))
-                        .shadow(radius: 10)
-                        .padding()
-                    
-                    Circle()
-                        .foregroundColor(.green)
-                        .opacity(lightIsOff)
-                        .frame(width: 120, height: 120)
-                        .overlay(Circle().stroke(Color.white, lineWidth: 5))
-                        .shadow(radius: 10)
-                        .padding()
+                    redLight
+                    yellowLight
+                    greenLight
                 }
             }
             
@@ -80,20 +61,20 @@ struct ContentView: View {
     }
     
     func someAction() {
-//        switch currentLight {
-//        case .red:
-//            greenLight.alpha = lightIsOff
-//            redLight.alpha = lightIsOn
-//            currentLight = .yellow
-//        case .yellow:
-//            redLight.alpha = lightIsOff
-//            yellowLight.alpha = lightIsOn
-//            currentLight = .green
-//        case .green:
-//            yellowLight.alpha = lightIsOff
-//            greenLight.alpha = lightIsOn
-//            currentLight = .red
-//        }
+        switch currentLight {
+        case .red:
+            greenLight.brightness = lightIsOff
+            redLight.brightness = lightIsOn
+            currentLight = .yellow
+        case .yellow:
+            redLight.brightness = lightIsOff
+            yellowLight.brightness = lightIsOn
+            currentLight = .green
+        case .green:
+            yellowLight.brightness = lightIsOff
+            greenLight.brightness = lightIsOn
+            currentLight = .red
+        }
     }
 }
     

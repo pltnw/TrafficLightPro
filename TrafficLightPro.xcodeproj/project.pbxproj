@@ -11,6 +11,7 @@
 		0256C2CE2944C20800EB6E12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0256C2CD2944C20800EB6E12 /* ContentView.swift */; };
 		0256C2D02944C20900EB6E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0256C2CF2944C20900EB6E12 /* Assets.xcassets */; };
 		0256C2D32944C20900EB6E12 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0256C2D22944C20900EB6E12 /* Preview Assets.xcassets */; };
+		02997D55294511290029F165 /* PlafondTrafficLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02997D54294511290029F165 /* PlafondTrafficLightView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		0256C2CD2944C20800EB6E12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0256C2CF2944C20900EB6E12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0256C2D22944C20900EB6E12 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		02997D54294511290029F165 /* PlafondTrafficLightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlafondTrafficLightView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 		0256C2BF2944C20800EB6E12 = {
 			isa = PBXGroup;
 			children = (
+				02997D54294511290029F165 /* PlafondTrafficLightView.swift */,
 				0256C2CA2944C20800EB6E12 /* TrafficLightPro */,
 				0256C2C92944C20800EB6E12 /* Products */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0256C2CE2944C20800EB6E12 /* ContentView.swift in Sources */,
+				02997D55294511290029F165 /* PlafondTrafficLightView.swift in Sources */,
 				0256C2CC2944C20800EB6E12 /* TrafficLightProApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
